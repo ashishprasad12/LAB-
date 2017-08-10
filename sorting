@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	clrscr();
+	int a[]={23,66,465,789,854,986};
+	int index,i,j;
+	printf("enter a element");
+	for(i=0;i<7;i++)
+	{
+		printf("%d",a[i]+" ");
+	}
+	for(i=0;i<=7;i++)
+	{
+		index=i;
+		for(j=i+1;j<7;j++)
+		{
+		if(a[j]<a[index])
+		  {
+			index=j;
+		  }
+		}
+		int temp=a[index];
+		a[index]=a[i];
+		a[i]=temp;
+	}
+	printf("the sorted array is=");
+	for(i=0;i<7;i++)
+	{
+	 printf("%d",a[i]+" ");
+	}
+	getch();
+}

@@ -1,0 +1,39 @@
+package electricity;
+import java.util.Scanner;
+public class Ebill {
+static int units;
+static String name,address,billno;
+static float amount;
+static void get(){
+	Scanner in = new Scanner(System.in);
+	System.out.println("Enter units consumed:");
+	units = in.nextInt();
+	System.out.println("Enter your name:");
+	in.nextLine();
+	name = in.nextLine();
+	System.out.println("Enter address:");
+	in.nextLine();
+	address = in.nextLine();
+	System.out.println("Enter billno.:");
+	in.nextLine();
+	billno = in.nextLine();
+	
+}
+static void cal(){
+	if(units<100)
+	{
+		amount=units*2;
+		System.out.println("Amount="+amount);
+	}
+	else if(units>=100&&units<500)
+	{
+		amount=units*3;
+		System.out.println("Amount="+amount);
+	}
+}
+public static void main(String[] args){
+	 Ebill.get();
+	 Ebill.cal();
+	
+}
+}

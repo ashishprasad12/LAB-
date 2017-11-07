@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<math.h>
+float f(float);
+int main()
+{
+float a,b,h,sum=0,x,trap;
+int n,i,m;
+cout<<"Enter the limits a & b & no of subinterual n\n";
+cin>>a>>b>>n;
+h=(b-a)/n;
+m=n-1;
+for(i=1;i<=m;i++)
+{
+x=a+i*h;
+sum=sum+f(x);
+}
+trap=h*(f(a)+2.0*sum+f(b))/2.0;
+cout<<"Value of integral"<<a<<endl;
+cout<<"subinterual="<<trap;
+getch();
+}
+float f(float x)
+{
+float func;
+func=(x*x*x);
+return(func);
+}
